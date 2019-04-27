@@ -27,28 +27,14 @@ const maintance = {
 const knexDB = require('knex')({
   client: 'mysql',
   connection: {
-    host: 'localhost',
-    user: 'admin',
-    password: "1234561asd",
-    database: 'arsbot'
+    host: 'sql7.freemysqlhosting.net',
+    user: 'sql7289690',
+    password: "pLVeqkDATr",
+    database: 'sql7289690'
   }
 });
 
 client.on("ready", () => {
-  var database = mysql.createConnection({
-    host: "sql7.freemysqlhosting.net",
-    user: "sql7289690",
-    password: "pLVeqkDATr",
-    database: "sql7289690"
-  });
-  setInterval(() => {
-    knexDB.from('weedbank').where("agree", "true").then(async err => {
-
-    })
-    .catch(e => {
-      logger.error(e)
-    })
-  }, 8000);
   setInterval(() => {
     var answers = [
       `${client.guilds.size} Servers`,
@@ -63,10 +49,26 @@ client.on("ready", () => {
     */
     client.user.setGame(
       `${answers[~~(Math.random() * answers.length)]}`
+  }, (100000))
+  var database = mysql.createConnection({
+    host: "sql7.freemysqlhosting.net",
+    user: "sql7289690",
+    password: "pLVeqkDATr",
+    database: "sql7289690"
+  });
+  setInterval(() => {
+    knexDB.from('weedbank').where("agree", "true").then(async err => {
+
+    })
+    .catch(e => {
+      logger.error(e)
+    })
+  }, 8000);
+  
 
     );
 
-  }, (100000))
+  
   const snekfetch = require('snekfetch')
   logger.verbose(`${client.user.username} Is up and ready to work`);
   logger.verbose(`Connected as: ${client.user.tag}`)
