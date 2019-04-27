@@ -24,6 +24,9 @@
       "tests/**"
     ]
   },
+  "engines": {
+    "node": "10.0.0"
+  },
   "author": "TheOnlyArtz",
   "license": "MIT",
   "dependencies": {
