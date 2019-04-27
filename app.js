@@ -122,7 +122,7 @@ client.on("guildCreate", guild => {
   /*
   Sends a "greeting" message that explains quickly on the bot
   */
-  guild.defaultChannel.send(`I have joined **${guild.name}** \n so let me introduce my self, my name is **Ars** \n Im for cool servers only, My developer is a guy called **Aimi** \n for the help command be sure to write \`'help\`\n If you didnt notice I've added text channel \`mod-log\` so you can log all the ban/kicks/mutes \n And I've created \`muted\` role so you can use \`' mute\``);
+  guild.defaultChannel.send(`I have joined **${guild.name}** \n so let me introduce my self, my name is **Ars** \n Im for cool servers only, My developer is a guy called **Aimi** \n for the help command be sure to write \`~help\`\n If you didnt notice I've added text channel \`mod-log\` so you can log all the ban/kicks/mutes \n And I've created \`muted\` role so you can use \`' mute\``);
   /*
   Send a "server-log" message to ArsBot offical server
   */
@@ -228,7 +228,7 @@ process.on('unhaldedRejection', (reason, p) => {
 
 
 let servers = {};
-var prefix = "'"
+var prefix = "~"
 let blocked = new Array(
   "yolooo",
   "wellp",
