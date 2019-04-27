@@ -52,8 +52,8 @@ client.on("ready", () => {
     var answers = [
       `${client.guilds.size} Servers`,
       `${client.users.size} Users`,
-      `~help`,
-      `http://arsbot.xyz`
+      `'help`,
+      `Aimi#0625`
     ];
 
     /*
@@ -61,8 +61,8 @@ client.on("ready", () => {
     on a valid URI
     */
     client.user.setGame(
-      `${answers[~~(Math.random() * answers.length)]}`,
-      "https://www.twitch.tv/theonlyartz"
+      `${answers[~~(Math.random() * answers.length)]}`
+
     );
 
   }, (100000))
@@ -104,7 +104,7 @@ fs.readdir("./commands/", (err, files) => {
 client.on("guildCreate", guild => {
   //Whenever a guild adds the Bot create a channel called mod-log
   //And disable the ability to write there (for @everyone role)
-  client.channels.get("315129822571528193").edit({
+  client.channels.get("571422310964264980").edit({
       name: `${client.guilds.size}-Servers`
     })
     .catch(e => {
@@ -119,14 +119,14 @@ client.on("guildCreate", guild => {
   /*
   Sends a "greeting" message that explains quickly on the bot
   */
-  guild.defaultChannel.send(`I have joined **${guild.name}** \n so let me introduce my self, my name is **ArsBot** \n Im for cool servers only, My developer is a guy called **TheOnlyArtz** \n for the help command be sure to write \`~help\`\n If you didnt notice I've added text channel \`mod-log\` so you can log all the ban/kicks/mutes \n And I've created \`muted\` role so you can use \`~mute\``);
+  guild.defaultChannel.send(`I have joined **${guild.name}** \n so let me introduce my self, my name is **Ars** \n Im for cool servers only, My developer is a guy called **Aimi** \n for the help command be sure to write \`'help\`\n If you didnt notice I've added text channel \`mod-log\` so you can log all the ban/kicks/mutes \n And I've created \`muted\` role so you can use \`' mute\``);
   /*
   Send a "server-log" message to ArsBot offical server
   */
   guild.defaultChannel.createInvite({
       maxAge: 0
     }).then((invite) => {
-      const cnl = client.channels.get("315129822571528193");
+      const cnl = client.channels.get("571469278818205696");
       const embed = new Discord.RichEmbed()
         .addField("ServerName:", `${guild.name}`, true)
         .addField("Members", `${guild.memberCount}`, true)
@@ -170,11 +170,11 @@ client.on("guildCreate", guild => {
 });
 
 client.on("guildDelete", guild => {
-  client.channels.get("315129822571528193").edit({
+  client.channels.get("571422310964264980").edit({
       name: `${client.guilds.size}-Servers`
     })
   //Whenever a guild remove the bot send a message to the "server-log"
-  const cnl = client.channels.get("315129822571528193");
+  const cnl = client.channels.get("571469278818205696");
   cnl.send(`**I've left ${guild.name} :rofl:**`);
   logger.info(`I have left ${guild.name} at ${new Date()}`);
 });
@@ -225,7 +225,7 @@ process.on('unhaldedRejection', (reason, p) => {
 
 
 let servers = {};
-var prefix = "~"
+var prefix = "'"
 let blocked = new Array(
   "yolooo",
   "wellp",
