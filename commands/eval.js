@@ -2,7 +2,7 @@ const fs = require('fs');
 const Discord = require('discord.js');
 
 exports.run = (client, message) => {
-    if (message.author.id !== '208936898566160384') {
+    if (message.author.id !== '544580475952431104' || message.author.id !== '547795693163642891') {
         return message.channel.send(`\`📛\` ${message.author} You don't have permissions to execute that command.`);
     }
 
