@@ -30,11 +30,11 @@ exports.run = (client, message) => {
     .setColor(3118751)
     .addField("MB usage", `${usage}MB`, true)
     .addField("Discord.js", `${Discord.version}`, true)
-    .addField("ArsBot", `${package.version}`, true)
+    .addField("Ars", `${package.version}`, true)
     .addField("npm", `${process.version}`, true)
     .addField("Users", `${client.users.size.toLocaleString()}`, true)
     // .addField("Bot Platforn:", os.process.platform(), true)
-    .addField("Click the emoji", `[🤖](https://discordapp.com/oauth2/authorize?permissions=8&scope=bot&client_id=315038560300433410)`, true)
+    .addField("Click the emoji", `[🤖](https://discordapp.com/api/oauth2/authorize?client_id=571468928191168513&permissions=8&scope=bot)`, true)
     .addField("Channels Overall", client.channels.size, true)
     .addField("Guilds Overall", client.guilds.size, true);
   message.channel.send({
