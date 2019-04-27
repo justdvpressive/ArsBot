@@ -47,9 +47,8 @@ client.on("ready", () => {
     Set the the bot to stream
     on a valid URI
     */
-    client.user.setGame(
-      `${answers[~~(Math.random() * answers.length)]}`
-  }, (100000))
+    client.user.setGame(`${answers[~~(Math.random() * answers.length)]}`
+  }, (100000));
   var database = mysql.createConnection({
     host: "sql7.freemysqlhosting.net",
     user: "sql7289690",
