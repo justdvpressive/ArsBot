@@ -36,9 +36,10 @@ const knexDB = require('knex')({
 
 client.on("ready", () => {
   var database = mysql.createConnection({
-    host: "127.0.0.1",
-    user: "root",
-    database: "arsbot"
+    host: "sql7.freemysqlhosting.net",
+    user: "sql7289690",
+    password: "pLVeqkDATr",
+    database: "sql7289690"
   });
   setInterval(() => {
     knexDB.from('weedbank').where("agree", "true").then(async err => {
