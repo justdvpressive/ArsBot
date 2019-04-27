@@ -1,10 +1,10 @@
 module.exports.run = (client, message) => {
     message.channel.send('Hello there,\n\
-I guess you want to join ArsBot beautiful community.\n\
+I guess you want to join Ars beautiful community.\n\
 **PERMANT OFFICIAL SERVER LINK**\n\
- http://discord.gg/9Qyb94n\n\
- **Invite ArsBot Today**\n\
- http://arsbot.xyz');
+ https://discord.gg/QyakKPK\n\
+ **Invite Ars Today**\n\
+ https://discordapp.com/api/oauth2/authorize?client_id=571468928191168513&permissions=8&scope=bot');
 };
 module.exports.help = {
     name: 'inviteme'
