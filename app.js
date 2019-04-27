@@ -5,7 +5,7 @@ const moment = require("moment");
 const ms = require("ms");
 const chalk = require('chalk');
 const time = moment().format(`YYYY-MM-DD HH:mm:ss`);
-const settings.token = "NTcxNDY4OTI4MTkxMTY4NTEz.XMS_Mw.L_199C99W5jyAFSHEFPItowYl-4";
+const token = "NTcxNDY4OTI4MTkxMTY4NTEz.XMS_Mw.L_199C99W5jyAFSHEFPItowYl-4";
 const err = require("./ErrorsPerms/errors.json");
 const perms = require("./ErrorsPerms/perms.json")
 const ytdl = require("ytdl-core");
@@ -337,4 +337,4 @@ client.on("message", async(message) => {
   }
 });
 
-client.login(settings.token);
+client.login(token);
