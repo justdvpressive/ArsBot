@@ -18,7 +18,7 @@ exports.run = (client, message) => {
         cooldown.delete(message.author.id && message.guild.id);
     }, 300000);
     let guild = message.guild;
-    const cnl = client.channels.get('571469278818205696);
+    const cnl = client.channels.get('571469278818205696');
     message.reply('Hey we got your report , we will reply soon as possible here is the full reportation:');
     const embed2 = new Discord.RichEmbed()
   .setAuthor(`Report from ${message.author.tag}`, message.author.displayAvatarURL)
